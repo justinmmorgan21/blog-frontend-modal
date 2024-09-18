@@ -49,12 +49,11 @@ url {
 }
 
 button {
-  padding: 10px;
+  height: 30px;
+  width: 60px;
   margin: 6px 10px;
-  font-size: 1.1em;
-  font-weight: bold;
   background-color: rgb(229, 183, 65);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 main {
@@ -76,4 +75,9 @@ main {
 
 #posts-index {
   margin-top: 50px;
+}
+
+#submit {
+  background-color: rgb(229, 183, 65);
+  height: 30px;
 }

@@ -16,7 +16,12 @@ export function PostsNew() {
         <input type="text" id="body" name="body"></input><br />
         <label htmlFor="image">Image: </label>
         <input type="url"></input><br />
-        <button>Submit</button>
+      
+        <label htmlFor="submit"></label>
+        <input type="submit" id="submit" name="submit"></input>
+
+        
+
         <button id="clear" onClick={clear}>Clear</button>
       </form>
     </div>
