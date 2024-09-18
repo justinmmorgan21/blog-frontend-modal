@@ -2,7 +2,6 @@ import { PostsIndex } from "./PostsIndex";
 import { PostsNew } from "./PostsNew";
 
 export function PostsPage() {
-  let name = "Test";
   let posts = [
     {
       id: 1,
@@ -26,7 +25,7 @@ export function PostsPage() {
   return (
     <main>
       <PostsNew />
-      <PostsIndex name={name} posts={posts} />
+      <PostsIndex posts={posts} />
     </main>
   );
 }

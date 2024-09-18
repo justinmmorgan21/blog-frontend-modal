@@ -18,7 +18,7 @@ export function PostsNew() {
         <input type="url"></input><br />
       
         <label htmlFor="submit"></label>
-        <input type="submit" id="submit" name="submit"></input>
+        <button type="submit" id="submit" name="submit">Submit</button>
 
         
 
