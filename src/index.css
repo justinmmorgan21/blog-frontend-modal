@@ -5,3 +5,75 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  margin: 0;
+  font-family: system-ui;
+}
+
+
+header {
+  background-color: black;
+  color: white;
+  padding: 1em;
+}
+
+
+header a {
+  margin-right: 1em;
+  padding: 0.5em;
+  color: inherit;
+  text-decoration: none;
+}
+
+
+header a:hover {
+  background-color: gray;
+  border-radius: 0.1em;
+}
+
+
+footer {
+  background-color: gray;
+  padding: 2em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+input,
+textarea,
+url {
+  height: 25px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 10px;
+  margin: 6px 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: rgb(229, 183, 65);
+  border-radius: 10px;
+}
+
+main {
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#posts-index {
+  margin-top: 50px;
+}
