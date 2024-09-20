@@ -43,9 +43,16 @@ footer {
 input,
 textarea,
 url {
-  height: 25px;
+  font-size: 1.4em;
+  height: 28px;
+  width: 500px;
   border-radius: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+label {
+  display: inline-block;
+  width: 70px;
 }
 
 form button {
