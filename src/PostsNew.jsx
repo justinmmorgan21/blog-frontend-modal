@@ -1,26 +1,31 @@
-export function PostsNew() {
+
+export function PostsNew(props) {
   function clear() {
     const titleInput = document.getElementById("title");
     const bodyInput = document.getElementById("body");
     titleInput.value = "";
     bodyInput.value = "";
   }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const params = new FormData(event.target);
+    props.onCreate(params);
+  }
   
   return (
     <div id="posts-new">
       <h1>New post</h1>
-      <form method="POST" action="http://localhost:3000/posts.json">
-        <label htmlFor="title">Title: </label>
-        <input type="text" id="title" name="title"></input><br />
-        <label htmlFor="body">Body: </label>
-        <input type="text" id="body" name="body"></input><br />
-        <label htmlFor="image">Image: </label>
-        <input type="text" id="image" name="image"></input><br />
-      
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="title"></label>
+        <input type="text" id="title" name="title" placeholder="Title"></input><br />
+        <label htmlFor="body"></label>
+        <textarea type="text" rows="4" id="body" name="body" placeholder="Post Content"></textarea><br />
+        <label htmlFor="image"></label>
+        <input type="text" id="image" name="image" placeholder="Image"></input><br />
+        <input type="file"></input><br />
         <label htmlFor="submit"></label>
         <button type="submit" id="submit" name="submit">Submit</button>
-
-        
 
         <button id="clear" onClick={clear}>Clear</button>
       </form>

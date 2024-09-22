@@ -43,16 +43,25 @@ footer {
 input,
 textarea,
 url {
-  font-size: 1.4em;
+  font-size: 1.2em;
   height: 28px;
-  width: 500px;
   border-radius: 5px;
   margin-bottom: 15px;
 }
 
+#title {
+  width: 50%;
+}
+
+textarea {
+  width: 100%;
+  border: solid black 2px;
+  height: auto;
+}
+
 label {
   display: inline-block;
-  width: 70px;
+  width: 0px;
 }
 
 form button {
@@ -87,4 +96,10 @@ main {
 #submit {
   background-color: rgb(229, 183, 65);
   height: 30px;
+}
+
+.card {
+  background-color: lightgray;
+  padding: 8px;
+  border-radius: 5px;
 }

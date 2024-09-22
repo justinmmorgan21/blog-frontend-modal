@@ -21,6 +21,13 @@ export function PostsPage() {
     setcurrentPost(post);
   };
 
+  const handleCreate = (params) => {
+    axios.post("http://localhost:3000/posts.json", params).then( response => {
+      console.log(response.data);
+      setPosts([...posts, response.data]);
+    })
+  }
+
   const handleClose = () => {
     setIsPostsShowVisible(false);
   };
@@ -29,7 +36,7 @@ export function PostsPage() {
 
   return (
     <main>      
-      <PostsNew />
+      <PostsNew onCreate={handleCreate}/>
       <PostsIndex posts={posts} onShowPost={handleShow} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
         <PostsShow post={currentPost} />
