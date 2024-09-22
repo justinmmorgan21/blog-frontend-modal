@@ -17,35 +17,9 @@ export function PostsPage() {
   }
 
   const handleShow = (post) => {
-    // axios.get("http://localhost:3000/posts/1.json").then(response => {
-    //   console.log(response.data);
-    //   // setPosts(response.data);
-    // })
     setIsPostsShowVisible(true);
     setcurrentPost(post);
   };
-
-  const handleCreate = () => {
-    axios.post("http://localhost:3000/posts.json", {
-      title: "New One",
-      body: "Here is some dummy text for funzies",
-      image: "image1.com"
-    }).then(response => {
-      console.log(response.data);
-    })
-  }
-  const handleUpdate = () => {
-    axios.patch("http://localhost:3000/posts/2.json", {
-      title: "CHANGED!!!!"
-    }).then(response => {
-      console.log(response.data);
-    })
-  }
-  const handleDelete = () => {
-    axios.delete("http://localhost:3000/posts/2.json").then(response => {
-      console.log(response.data);
-    })
-  }
 
   const handleClose = () => {
     setIsPostsShowVisible(false);
@@ -54,14 +28,7 @@ export function PostsPage() {
   useEffect(handleIndex, []);
 
   return (
-    <main>
-      <button onClick={handleIndex}>Post index</button>
-      <button onClick={handleShow}>Post show</button>
-      <button onClick={handleCreate}>Post create</button>
-      <button onClick={handleUpdate}>Post update</button>
-      <form></form>
-      <button onClick={handleDelete}>Post delete</button>
-      
+    <main>      
       <PostsNew />
       <PostsIndex posts={posts} onShowPost={handleShow} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
