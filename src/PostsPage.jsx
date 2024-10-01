@@ -1,5 +1,5 @@
-import { PostsIndex } from "./PostsIndex";
-import { PostsNew } from "./PostsNew";
+// import { PostsIndex } from "./PostsIndex";
+// import { PostsNew } from "./PostsNew";
 import { PostsShow } from "./PostsShow";
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -16,17 +16,17 @@ export function PostsPage() {
     })
   }
 
-  const handleShow = (post) => {
-    setIsPostsShowVisible(true);
-    setcurrentPost(post);
-  };
+  // const handleShow = (post) => {
+  //   setIsPostsShowVisible(true);
+  //   setcurrentPost(post);
+  // };
 
-  const handleCreate = (params) => {
-    axios.post("http://localhost:3000/posts.json", params).then( response => {
-      console.log(response.data);
-      setPosts([...posts, response.data]);
-    })
-  }
+  // const handleCreate = (params) => {
+  //   axios.post("http://localhost:3000/posts.json", params).then( response => {
+  //     console.log(response.data);
+  //     setPosts([...posts, response.data]);
+  //   })
+  // }
 
   const handleClose = () => {
     setIsPostsShowVisible(false);
@@ -36,11 +36,10 @@ export function PostsPage() {
 
   return (
     <main>      
-      <PostsNew onCreate={handleCreate}/>
-      <PostsIndex posts={posts} onShowPost={handleShow} />
-      <Modal show={isPostsShowVisible} onClose={handleClose}>
+      {/* <PostsIndex posts={posts} onShowPost={handleShow} /> */}
+      {/* <Modal show={isPostsShowVisible} onClose={handleClose}>
         <PostsShow post={currentPost} />
-      </Modal>
+      </Modal> */}
     </main>
   );
 }
