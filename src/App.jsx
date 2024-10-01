@@ -8,7 +8,6 @@ import { LoginPage } from "./LoginPage";
 import { Footer } from "./Footer";
 import { PostsNewPage } from "./PostsNewPage";
 import { PostsIndexPage } from "./PostsIndexPage";
-import { PostsShowPage } from "./PostsShowPage";
 
 const router = createBrowserRouter([
   {
@@ -41,11 +40,6 @@ const router = createBrowserRouter([
         element: <PostsIndexPage />,
         loader: () =>
           axios.get("http://localhost:3000/posts.json").then(response => response.data)
-      },
-      {
-        path: "/posts/:id",
-        element: <PostsShowPage />,
-        loader: ({ params }) => axios.get(`http://localhost:3000/posts/${params.id}.json`).then(response => response.data)
       }
     ],
   },
